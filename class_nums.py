@@ -26,7 +26,7 @@ def code_class_size(details_li: list, class_size:int, line:int, class_group_id: 
     elif 70 < class_size <= 80:
         details_li[8] += 1
     elif 80 < class_size <= 90:
-        print("Class between 81 and 90 at", line, "with", class_size, "students")
+        #print("Class between 81 and 90 at", line, "with", class_size, "students")
         details_li[9] += 1
     else:
         print("Other class size:", class_size, "at line", line)
@@ -81,20 +81,21 @@ def get_data():
 
         class_size_li.append(class_size) 
 
-    class_avg = get_average(class_size_li)
-
     print(mon_count, tue_count, wed_count, thu_count, fri_count)
+    print("")
     print(*mon_details)
     print(*tue_details)
     print(*wed_details)
     print(*thu_details)
     print(*fri_details)
-    print("\n", class_avg)
+    print("")
     print(get_average(mon_cls_sz_li))
     print(get_average(tue_cls_sz_li))
     print(get_average(wed_cls_sz_li))
     print(get_average(thu_cls_sz_li))
     print(get_average(fri_cls_sz_li))
+    print("")
+    print(get_average(class_size_li))
 
 if __name__ == "__main__":
     get_data()
